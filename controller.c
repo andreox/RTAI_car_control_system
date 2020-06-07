@@ -217,7 +217,7 @@ static void * control_loop(void * par) {
 
 				control_action = 4; //brake only when no skid is detected.
 				/* INVIA MESSAGGIO BLOCCANTE ALL'ALTRA RUOTA */
-				int blocca = 1 ; //*** VAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA RRRRRRRRIPOSTO A 0
+				int blocca = 1 ; 
 				rt_printk("INVIO MESSAGGIO SONO IL CONTROLLER 0 %d\n",blocca);
 				rt_mbx_send(mbx, &blocca, sizeof(int)) ; //****
 
